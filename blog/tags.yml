@@ -1,0 +1,8 @@
+update:
+  label: Feature Update
+  permalink: /feature-updates
+  description: Posts w/ Feature Updates
+security:
+  label: Security Update
+  permalink: /security-update
+  description: Posts w/ Critical Security Updates

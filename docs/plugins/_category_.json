@@ -1,0 +1,8 @@
+{
+  "label": "Plugins",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about what plugins are, what they can do, and how you can use them to extend your bus' functionality"
+  }
+}
