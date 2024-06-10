@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgxplus_docs=self.webpackChunkgxplus_docs||[]).push([[518],{5590:s=>{s.exports=JSON.parse('{"metadata":{"permalink":"/gxplus-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
