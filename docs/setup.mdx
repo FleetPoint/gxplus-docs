@@ -22,6 +22,10 @@ Check the studio logs to see if there was an error with migrating to GX+. If the
 
 Check out the configuration options next!
 
+:::warning
+With GX+, **ALL lights** besides the StepWell & Marker lights are transparency based, instead of material based. This means, those lights, such as warning lights and turn signals, will need to have a duplicate part slightly offset, that should be named something like "Backing" with `Transparency` set to `0`, and the Material set to `SmoothPlastic`. The light itself should have `Transparency` set to `1`, and the Material set to `Neon`.
+:::
+
 :::note
 Still need support? There's a support channel in our discord server.
 
