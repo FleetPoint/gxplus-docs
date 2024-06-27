@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgxplus_docs=self.webpackChunkgxplus_docs||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"GX+ Released!","permalink":"/gxplus-docs/blog/gxplus-release","unlisted":false}]}')}}]);
