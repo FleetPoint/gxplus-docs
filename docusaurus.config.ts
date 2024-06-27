@@ -8,7 +8,7 @@ const config: Config = {
 	favicon: "img/gxplus.png",
 
 	// Set the production url of your site here
-	url: "https://fleetpoint.github.io",
+	url: "https://FleetPoint.github.io",
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
 	baseUrl: "/gxplus-docs/",
@@ -35,15 +35,15 @@ const config: Config = {
 			{
 				docs: {
 					sidebarPath: "./sidebars.ts",
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl: "https://github.com/fleetpoint/gxplus-docs/tree/master/",
+					editUrl: "https://github.com/FleetPoint/gxplus-docs/tree/master/",
+					showLastUpdateAuthor: true,
+					showLastUpdateTime: true,
 				},
 				blog: {
 					showReadingTime: true,
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl: "https://github.com/fleetpoint/gxplus-docs/tree/master/",
+					editUrl: "https://github.com/FleetPoint/gxplus-docs/tree/master/",
+					showLastUpdateAuthor: true,
+					showLastUpdateTime: true,
 				},
 				theme: {
 					customCss: "./src/css/custom.css",
@@ -70,8 +70,8 @@ const config: Config = {
 				},
 				{ to: "/blog", label: "Blog", position: "left" },
 				{
-					href: "https://github.com/facebook/docusaurus",
-					label: "GitHub",
+					href: "roblox://placeId=16798209428&launchData=36bmp1sunmj5rzty92lhiicy5x70",
+					label: "Get GX+",
 					position: "right",
 				},
 			],
@@ -92,16 +92,12 @@ const config: Config = {
 					title: "Community",
 					items: [
 						{
-							label: "Stack Overflow",
-							href: "https://stackoverflow.com/questions/tagged/docusaurus",
-						},
-						{
 							label: "Discord",
 							href: "https://discordapp.com/invite/docusaurus",
 						},
 						{
-							label: "Twitter",
-							href: "https://twitter.com/docusaurus",
+							label: "Roblox",
+							href: "https://www.roblox.com/groups/13299030/FleetPoint#!/about",
 						},
 					],
 				},
@@ -114,7 +110,7 @@ const config: Config = {
 						},
 						{
 							label: "GitHub",
-							href: "https://github.com/facebook/docusaurus",
+							href: "https://github.com/FleetPoint",
 						},
 					],
 				},
@@ -126,6 +122,15 @@ const config: Config = {
 			darkTheme: prismThemes.dracula,
 		},
 	} satisfies Preset.ThemeConfig,
+
+	plugins: [
+		[
+			require.resolve("docusaurus-lunr-search"),
+			{
+				highlightResult: true,
+			},
+		],
+	],
 };
 
 export default config;
