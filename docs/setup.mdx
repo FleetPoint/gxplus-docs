@@ -23,7 +23,15 @@ Check the studio logs to see if there was an error with migrating to GX+. If the
 Check out the configuration options next!
 
 :::warning
+GX+ was tested primarily on stock Gen X buses. This means that heavily modified buses with extra features may not work at all, and will likely need a plugin replacement for GX+.
+
+If your feature was just isolated in a single function, or is super easy to migrate to GX+, we will be happy to do that free of charge. Complicated features will require a [commission](/docs/plugins/commissions).
+:::
+
+:::warning
 With GX+, **ALL lights** besides the StepWell & Marker lights are transparency based, instead of material based. This means, those lights, such as warning lights and turn signals, will need to have a duplicate part slightly offset, that should be named something like "Backing" with `Transparency` set to `0`, and the Material set to `SmoothPlastic`. The light itself should have `Transparency` set to `1`, and the Material set to `Neon`.
+
+The GX+ Migration Plugin does **not** do this for you since we aren't sure how your lights were previously setup if you did any modifications.
 :::
 
 :::note
