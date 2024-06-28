@@ -1,0 +1,52 @@
+# Intro
+Today, you will follow along on how to make a plugin! This guide will cover the basics of making a plugin, and how to get started. If you have any questions, feel free to ask in our `#support` channel.
+
+As an example, here's what a plugin might look like:
+```lua
+--!strict
+local GXPlus = require(script.Parent.Parent.lib.include.node_modules["@gxplus"].types.dist.types)
+
+type Preferences = {
+	configOption1: string
+}
+
+local plugin: GXPlus.VehicleStatePlugin<Preferences> = {
+	name = "Identifiable Plugin Name",
+	invocationType = "vehicle_state_update",
+	invocationContext = "server",
+	overrideDefault = false,
+	preferences = {
+		configOption1: "Hello world!"
+	},
+	invoke = function(state, preferences, context)
+		-- code goes here
+	end,
+}
+
+return plugin
+```
+
+Let's break this down
+- `name` is the name of the plugin
+- `invocationType` is the type of event that will trigger the Plugin
+   - `standalone` is a plugin that is not triggered by an event, but is instead called directly like a function
+    - `vehicle_state_update` is triggered when the state of a vehicle changes
+    - `player_enter` is triggered when a player enters a vehicle
+    - `player_exit` is triggered when a player exits a vehicle
+- `invocationContext` is the context in which the Plugin will be invoked (client or server)
+:::note
+Client-sided plugins are not currently supported
+:::
+- `overrideDefault` is whether or not the plugin will override the default behavior (applies to `player_enter` and `player_exit` events)
+- `preferences` is a table of configuration options, it uses the `Preferences` type to help with correction and auto-complete
+- `invoke` is the function that will be called when the plugin is invoked
+:::note
+All plugins besides `standalone` plugins also have an `initialize` plugin that is called when the plugin is loaded
+
+It has the same parameters as `invoke`
+:::
+
+## Type Support w/ luau
+Plugins (and the `BusConfiguration` for that matter) use the `luau` type system. This means that you can use types to help with auto-complete and error checking.
+
+This basically tells you what you can put for a certain option/property, and it will tell you if you put something wrong.
